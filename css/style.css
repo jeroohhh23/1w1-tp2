@@ -1,0 +1,326 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 14px;
+}
+
+body {
+    background-color: #68859e;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*///////////////// Navigation */
+.entete__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    font-size: 2rem;
+    background-color: rgb(220, 220, 220);
+    padding: 10px;
+    z-index: 2000;
+}
+
+.entete__nav a {
+    text-decoration: none;
+    padding: 10px;
+}
+
+.entete__nav a:hover {
+    background-color: rgb(156, 151, 151);
+    color: rgb(255, 251, 251);
+}
+
+.navigation__bouton {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+    gap: 20px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+}
+
+#chk-burger:checked ~ .navigation {
+    transform: translateX(0);
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 10px 20px;
+}
+
+.navigation a:hover {
+    background-color: rgba(255,255,255,0.15);
+}
+
+/* //////////////////////Header hero */
+.hero {
+    min-height: 100vh;
+    background-image: url(https://www.vanupied.com/wp-content/uploads/barcelone-hotel-luxe-arts-barcelona-2.jpeg);
+    background-size: cover;
+    background-position-y: 80%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;       /* largeur du bloc transparent à gauche */
+    height: 100%;     
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.hero__contenu {
+    position: relative;
+    z-index: 2;
+    width: 40%;
+    padding: 60px 30px 40px 30px;
+    color: white;
+    backdrop-filter: blur(3px);
+}
+
+.h1__entete {
+    color: #111;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 70px;
+    margin: 0;
+    text-shadow: 2px 1px rgb(154, 158, 99);
+    text-align: left;
+}
+
+.h2__entete {
+    color: #111;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    margin: 0;
+    text-shadow: 2px 1px rgb(154, 158, 99);
+    text-align: left;
+}
+
+.h3__entete {
+    margin-top: 200px;  
+    font-size: 40px;
+    text-shadow: 2px 1px rgb(154, 158, 99);
+    text-align: left;
+}
+
+/*////////////////////////////Infos hero */
+.hero__infos {
+    position: relative;
+    z-index: 2;
+    margin-top: 360px;        
+    color: white;
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+.hero__infos p {
+    margin: 8px 0;
+}
+
+/* ///////////////////Sections/////// */
+section {
+    height: 100vh;
+}
+
+section h1 {
+    color: white;                 
+    border: 2px solid white;     
+    padding: 10px 20px;           
+    display: inline-block;        
+    border-radius: 8px;           
+    font-weight: bold;            
+}
+
+/* liens sous chaque section */
+section > a {
+    background-color: rgba(15, 14, 14, 0.18);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding-left: 10px;
+    margin: 0;
+    font-size: 30px;
+}
+
+/* couleurs des sections */
+.un {
+    background-color: rgb(139, 151, 86);
+}
+
+.deux {
+    background-color: rgb(197, 138, 138);
+}
+
+.trois {
+    background-color: rgb(140, 95, 89);
+}
+
+.quatre {
+    background-color: rgb(207, 183, 111);
+}
+
+/* //////////////////////////Formulaire */
+.formulaire {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(4px);
+    font-family: Arial, sans-serif;
+}
+
+.formulaire__div {
+    margin-bottom: 20px;
+}
+
+.formulaire__label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+}
+
+.formulaire__input {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f7f7f7;
+    transition: 0.3s;
+}
+
+.formulaire__input:focus {
+    border-color: #0077ff;
+    box-shadow: 0 0 5px rgba(0, 120, 255, 0.4);
+    outline: none;
+    background: white;
+}
+
+.formulaire__div label {
+    margin-right: 15px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.boutonFormulaire {
+    width: 100%;
+    padding: 14px;
+    background: #0077ff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.boutonFormulaire:hover {
+    background: #005cd4;
+    transform: translateY(-2px);
+}
+
+/* /////////////////////////////Tableau */
+.hotel-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: white;
+    font-size: 1.2rem;
+}
+
+.hotel-table th,
+.hotel-table td {
+    border: 2px solid black;
+    padding: 12px;
+    text-align: center;
+}
+
+.hotel-table thead {
+    background-color: rgb(55, 82, 87);
+    color: white;
+    font-weight: bold;
+}
+
+.hotel-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.hotel-table caption {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.hotel-table tfoot td {
+    background-color: rgb(255, 204, 0);
+    font-weight: bold;
+    padding: 15px;
+}
+
+.pied-page {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.pied-page a {
+    color: #66aaff;
+    text-decoration: none;
+}
+
+.pied-page a:hover {
+    text-decoration: underline;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+figure > img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.centre {
+    max-width: 1100px;
+    margin: 0 auto;
+}
