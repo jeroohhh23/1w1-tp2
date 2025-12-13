@@ -64,7 +64,7 @@ body {
 }
 
 .navigation a {
-    color: white;
+    color: rgb(159, 66, 66);
     text-decoration: none;
     font-size: 22px;
     padding: 10px 20px;
@@ -176,7 +176,7 @@ section > a {
 }
 
 .deux {
-    background-color: rgb(197, 138, 138);
+    background-color: rgb(76, 68, 68);
 }
 
 .trois {
@@ -186,7 +186,12 @@ section > a {
 .quatre {
     background-color: rgb(207, 183, 111);
 }
-
+.cinq {
+    background-color: rgb(228, 231, 240);  /* Choisis la couleur que tu veux */
+}
+.galerie{
+    background-color: #d880e4;
+}
 /* //////////////////////////Formulaire */
 .formulaire {
     max-width: 450px;
@@ -324,3 +329,152 @@ figure > img {
     max-width: 1100px;
     margin: 0 auto;
 }
+/* SECTION ARTICLES */
+.articles-section {
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+}
+
+.titre-articles {
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 60px;
+    color: #222;
+}
+
+/* Style général d'un article */
+.article-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 70px;
+}
+
+/* Alternance droite-gauche */
+.article-item.inverse {
+    flex-direction: row-reverse;
+}
+
+/* Texte */
+.article-texte {
+    flex: 1;
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.article-texte h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Artciles*/
+
+.article-item figure {
+    flex: 1;
+}
+
+.article-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.article-item figcaption {
+    margin-top: 8px;
+    font-style: italic;
+    color: #444;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .article-item,
+    .article-item.inverse {
+        flex-direction: column;
+    }
+
+}
+/*Section pour les videos*/
+.video-source a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.video-source a:hover {
+    text-decoration: underline;
+}
+.videos-wrapper {
+    display: flex;
+    justify-content: center; /* centre horizontalement */
+    align-items: center;     /* centre verticalement */
+    gap: 30px;
+    max-width: 1100px;       /* limite la largeur totale */
+    margin: 0 auto;          /* centre le bloc entier */
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.video-bloc {
+    width: 33%;
+    min-width: 280px;
+}
+
+.video-section {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.video-source {
+    font-size: 0.8rem;
+    text-align: right;
+    margin-top: 6px;
+}
+
+/*GALERIE D'IMAGES*/
+
+.galerie {
+    padding: 60px 20px;
+}
+
+.galerie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));   /*Taille images*/
+    gap: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Images */
+.galerie-grid img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+
+}
+/*Texte section 2*/
+
+.deux p {
+    max-width: 900px;          /* largeur agréable à lire */
+    margin: 20px auto;         /* centré horizontalement */
+    font-family: 'Georgia', serif;  /* élégance */
+    font-size: 1.6rem;
+    line-height: 1.8;          /* espace entre les lignes */
+    color: #fdfcf5;            /* blanc cassé pour bien contraster avec le fond */
+    text-align: justify;        /* lecture élégante */
+}
+
+/* premier mot légèrement mis en valeur */
+.deux p:first-child::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f7d358;  /* or clair */
+    float: left;
+    margin-right: 8px;
+    line-height: 1;
+}
+
+
+
+
+
+

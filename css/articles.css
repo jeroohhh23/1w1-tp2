@@ -1,18 +1,24 @@
-.article{
+/*  réduit un peu la largeur du bloc image */
+.article-item figure {
+    flex: 0.6; 
+}
+/* On réduit espace entre l'image et le texte */
+.article-item {
     display: flex;
+    align-items: center;
+    gap: 10px;          
+    margin-bottom: 30px; 
 }
-.article__div{
 
+/* Taille réduite des images */
+.article-item img {
+    width: 45%;          
+    max-width: 180px;    
+    border-radius: 8px;
 }
-.article__div p{
 
-}
-.article__figure{
-
-}
-.article__figure img{
-
-}
-.article__figure figcaption{
-    
+/* Le prend moins de place */
+.article-item figure {
+    flex: 0.35;
+    margin: 0;           
 }
