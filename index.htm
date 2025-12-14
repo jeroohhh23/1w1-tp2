@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/articles.css">
+</head>
+<body>
+
+<header class="hero entete">
+    <div class="hero__contenu">
+        <h1 class="h1__entete">Les Meilleurs Hotels</h1>
+        <h2 class="h2__entete">5 etoiles</h2>
+        <h3 class="h3__entete">
+            Les hôtels 5 étoiles représentent l’excellence absolue dans l’univers de l’hôtellerie...
+        </h3>
+        <a href="#quatre" class="btn-inscription">S'inscrire</a>
+<form class="search-form">
+    <input type="text" placeholder="Rechercher un hôtel..." class="search-input">
+    <button type="submit" class="search-btn">🔍</button>
+</form>
+        <div class="hero__infos">
+            <p>Courriel : contact@hotel5etoiles.com</p>
+            <p>Téléphone : 514-555-9090</p>
+            <p>Étudiant : Jeronimo Ocampo</p>
+            <p>Professeur : Eddy Martin</p>
+            <p>Adresse du dépôt github :
+            <a href="https://github.com/jeroohhh23/1w1-tp2">https://github.com/jeroohhh23/1w1-tp2</a>
+            </p>
+        </div>
+    </div>
+
+    <label class="navigation__bouton" for="chk-burger">
+        <figure>
+            <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=fff" width="64" height="64">
+        </figure>
+    </label>
+
+    <input type="checkbox" id="chk-burger">
+
+    <nav class="navigation">
+    <a href="#un" class="nav-link">Un</a>
+    <a href="#deux" class="nav-link">Deux</a>
+    <a href="#trois" class="nav-link">Trois</a>
+    <a href="#quatre" class="nav-link">Inscription</a>
+    <a href="#articles" class="nav-link">Articles</a>
+    <a href="#galerie" class="nav-link">Galerie</a>
+</nav>
+
+</header>
+
+<section id="un" class="un centre">
+    <h1>Un</h1>
+    <a href="#">Accueil</a>
+
+    <div class="videos-wrapper">
+
+        <!-- Vidéo 1 -->
+        <div class="video-bloc">
+            <video width="320" height="180" controls>
+                <source src="video/855139-hd_1920_1080_30fps.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+            <p class="video-source">
+                Source : 
+                <a href="https://www.pexels.com/video/VIDEO_LINK_1" target="_blank">Pexels</a>
+            </p>
+        </div>
+
+        <!-- Vidéo 2 -->
+        <div class="video-bloc">
+            <video width="320" height="180" controls>
+                <source src="video/855191-hd_1920_1080_25fps.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+            <p class="video-source">
+                Source : 
+                <a href="https://www.pexels.com/video/VIDEO_LINK_2" target="_blank">Pexels</a>
+            </p>
+        </div>
+
+       <div class="video-bloc">
+    <iframe
+        src="https://www.youtube.com/embed/cdKx1Zv3YKs"
+        title="Vidéo YouTube"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+
+    <p class="video-source">
+        Source :
+        <a href="https://www.youtube.com/watch?v=cdKx1Zv3YKs" target="_blank">
+            YouTube
+        </a>
+    </p>
+</div>
+
+    </div>
+</section>
+
+
+
+
+<section id="deux" class="deux centre">
+    <h1>Deux</h1>
+    <a href="#">Accueil</a>
+
+    <p>
+        Les hôtels cinq étoiles incarnent le summum du luxe et du raffinement dans l’industrie
+        hôtelière. Ils se distinguent par la qualité exceptionnelle de leurs services, l’attention
+        portée aux moindres détails et une expérience client personnalisée. Chaque séjour est pensé
+        pour offrir confort, élégance et exclusivité.
+    </p>
+
+    <p>
+        Ces établissements proposent généralement des chambres et des suites spacieuses, décorées
+        avec soin, ainsi que des installations haut de gamme telles que des spas, des restaurants
+        gastronomiques et des espaces de détente sophistiqués. Le personnel, hautement qualifié,
+        veille à répondre aux attentes les plus exigeantes des clients.
+    </p>
+
+    <p>
+        Choisir un hôtel cinq étoiles, c’est opter pour une expérience unique où le bien-être,
+        le service irréprochable et l’atmosphère luxueuse se rencontrent pour créer des souvenirs
+        inoubliables.
+    </p>
+</section>
+
+<section id="trois" class="trois centre">
+    <h1>Trois</h1>
+    <a href="#">Accueil</a>
+
+    <table class="hotel-table">
+        <caption>Tarifs des Hôtels 5 Étoiles</caption>
+
+        <thead>
+            <tr>
+                <th>Hôtel</th>
+                <th>Ville</th>
+                <th>Nuits</th>
+                <th>Prix/Nuit</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr><td>Royal Palace</td><td>Montréal</td><td>1</td><td>250$</td><td>250$</td></tr>
+            <tr><td>Luxury Suites</td><td>Toronto</td><td>2</td><td>300$</td><td>600$</td></tr>
+            <tr><td>Grand Élite</td><td>Vancouver</td><td>3</td><td>280$</td><td>840$</td></tr>
+            <tr><td>Hôtel Diamant</td><td>Québec</td><td>1</td><td>220$</td><td>220$</td></tr>
+            <tr><td>Océan Royale</td><td>Halifax</td><td>4</td><td>260$</td><td>1040$</td></tr>
+        </tbody>
+
+        <tfoot>
+            <tr><td colspan="5">Tous les prix incluent taxes et frais</td></tr>
+        </tfoot>
+    </table>
+</section>
+
+<!-- SECTION QUATRE -->
+<section id="quatre" class="quatre centre">
+    <h1>Quatre</h1>
+    <a href="#">Accueil</a>
+
+    <form class="formulaire">
+        <div class="formulaire__div">
+            <label class="formulaire__label" for="txtNom">Nom</label>
+            <input type="text" id="txtNom" class="formulaire__input">
+        </div>
+        <div class="formulaire__div">
+            <label class="formulaire__label" for="txtPrénom">Prénom</label>
+            <input type="text" id="txtPrénom" class="formulaire__input">
+        </div>
+        <div class="formulaire__div">
+            <label class="formulaire__label" for="txtCourriel">Courriel</label>
+            <input type="text" id="txtCourriel" class="formulaire__input">
+        </div>
+        <div class="formulaire__div">
+            <p>Sélectionner le type de forfait</p>
+
+            <label><input type="radio" name="radForfait"> Forfait 1</label>
+            <label><input type="radio" name="radForfait"> Forfait 2</label>
+            <label><input type="radio" name="radForfait"> Forfait 3</label>
+        </div>
+
+        <input type="submit" value="Valider">
+    </form>
+</section>
+
+
+<section id="articles" class="cinq centre">
+    <h1>Cinque</h1>
+    <a href="#">Accueil</a>
+  <div class="article-item">
+        <figure>
+            <img src="images/OIP (1).webp" alt="Hôtel 1">
+            <figcaption>Un hôtel d’exception au bord de la mer.</figcaption>
+        </figure>
+        <div class="article-texte">
+            <h2>Hôtel Paradisio</h2>
+            <p>
+                Cet hôtel luxueux offre une vue imprenable sur l’océan, 
+                un service irréprochable et des suites modernes pensées pour un confort ultime.
+            </p>
+        </div>
+    </div>
+
+    <!-- Article 2 : image droite -->
+    <div class="article-item inverse">
+        <figure>
+            <img src="images/image.png" alt="Hôtel 2">
+            <figcaption>Un établissement prestigieux au cœur de la ville.</figcaption>
+        </figure>
+        <div class="article-texte">
+            <h2>Royal City Hotel</h2>
+            <p>
+                Situé au centre-ville, cet hôtel 5 étoiles propose des restaurants gastronomiques,
+                un spa haut de gamme et des chambres élégantes au style contemporain.
+            </p>
+        </div>
+    </div>
+
+    <!-- Article 3 : image gauche -->
+    <div class="article-item">
+        <figure>
+            <img src="images/593885040.webp" alt="Hôtel 3">
+            <figcaption>Un resort luxueux entouré de nature.</figcaption>
+        </figure>
+        <div class="article-texte">
+            <h2>Nature Luxe Resort</h2>
+            <p>
+                Un cadre paisible, une architecture raffinée et des installations modernes font 
+                de ce resort un lieu parfait pour la détente totale.
+            </p>
+        </div>
+    </div>
+
+    <!-- Article 4 : image droite -->
+    <div class="article-item inverse">
+        <figure>
+            <img src="images/OIP (2).webp" alt="Hôtel 4">
+            <figcaption>Un hôtel haut de gamme au design futuriste.</figcaption>
+        </figure>
+        <div class="article-texte">
+            <h2>Futurium Palace</h2>
+            <p>
+                Un mélange unique entre innovation, confort et raffinement : découvrez un 
+                hôtel moderne offrant une expérience hors du commun.
+            </p>
+        </div>
+    </div>
+
+</section>
+<section id="galerie" class="galerie centre">
+    <h1>Galerie d’hôtels</h1>
+
+    <div class="galerie-grid">
+        <img src="images/pexels-amar-saleem-15661-70441.jpg" alt="Hôtel 1">
+        <img src="images/pexels-boonkong-boonpeng-442952-1134176.jpg" alt="Hôtel 2">
+        <img src="images/pexels-cottonbro-5371575.jpg" alt="Hôtel 3">
+        <img src="images/pexels-kamenczak-775219.jpg" alt="Hôtel 4">
+        <img src="images/pexels-osho-1001965.jpg" alt="Hôtel 5">
+        <img src="images/pexels-pixabay-164595.jpg" alt="Hôtel 6">
+        <img src="images/pexels-pixabay-258154.jpg" alt="Hôtel 7">
+        <img src="images/pexels-pixabay-260922.jpg" alt="Hôtel 8">
+        <img src="images/pexels-quark-studio-1159039-2507010.jpg" alt="Hôtel 9">
+        <img src="images/pexels-thorsten-technoman-109353-338504.jpg" alt="Hôtel 10">
+    </div>
+</section>
+
+
+<footer class="pied-page">
+
+    <div class="footer-contenu">
+
+        <!-- Colonne 1 : Infos -->
+        <div class="footer-bloc">
+            <p><strong>Collège de Maisonneuve</strong></p>
+            <p>3800, rue Sherbrooke Est</p>
+            <p>Montréal (Québec), H1X 2A2</p>
+            <p>Programme : 582-1W1 – Mise en page Web</p>
+            <p>Automne 2025</p>
+        </div>
+
+        <!-- Colonne 2 : Liens -->
+        <div class="footer-bloc">
+            <p><strong>Liens importants</strong></p>
+            <p><a href="#un">Accueil</a></p>
+            <p><a href="#quatre">Inscription</a></p>
+            <p><a href="#articles">Articles</a></p>
+            <p>
+                <a href="https://github.com/jeroohhh23/1w1-tp2" target="_blank">
+                    Dépôt GitHub
+                </a>
+            </p>
+        </div>
+
+        <!-- Colonne 3 : Sujet -->
+        <div class="footer-bloc">
+            <p><strong>À propos</strong></p>
+            <p>
+                Ce site présente un projet scolaire portant sur les hôtels 5 étoiles,
+                réalisé dans le cadre du cours de Techniques d’intégration multimédia.
+            </p>
+            <p class="privacy">
+                <a href="#">Avis de confidentialité</a> | <a href="#">Privacy Notice</a>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Réseaux sociaux -->
+    <div class="reseaux">
+        <a href="https://instagram.com" target="_blank">
+            <img src="https://s2.svgbox.net/social.svg?ic=instagram&color=fff" width="36" alt="Instagram">
+        </a>
+        <a href="https://facebook.com" target="_blank">
+            <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=fff" width="36" alt="Facebook">
+        </a>
+        <a href="https://youtube.com" target="_blank">
+            <img src="https://s2.svgbox.net/social.svg?ic=youtube&color=fff" width="36" alt="YouTube">
+        </a>
+    </div>
+
+    <p class="footer-bottom">
+        © 2025 — Jeronimo Ocampo
+    </p>
+
+</footer>
+
+
+</body>
+</html>

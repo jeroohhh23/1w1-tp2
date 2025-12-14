@@ -1,0 +1,621 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 14px;
+}
+
+body {
+    background-color: #68859e;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*///////////////// Navigation */
+.entete__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    font-size: 2rem;
+    background-color: rgb(220, 220, 220);
+    padding: 10px;
+    z-index: 2000;
+}
+
+.entete__nav a {
+    text-decoration: none;
+    padding: 10px;
+}
+
+.entete__nav a:hover {
+    background-color: rgb(156, 151, 151);
+    color: rgb(255, 251, 251);
+}
+
+.navigation__bouton {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+    gap: 20px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+}
+
+#chk-burger:checked ~ .navigation {
+    transform: translateX(0);
+}
+
+.navigation a {
+    color: rgb(159, 66, 66);
+    text-decoration: none;
+    font-size: 22px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navigation a.active {
+    background-color: #ff9900;
+    color: black;
+    font-weight: bold;
+    border-left: 5px solid white;
+}
+/* section ciblée */
+section:target {
+    outline: 4px solid #ff9900;
+    outline-offset: -10px;
+}
+
+/* lien actif*/
+.navigation a:focus,
+.navigation a:active {
+    background-color: #ff9900;
+    color: black;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    background-color: rgba(255,255,255,0.15);
+
+}
+
+/* //////////////////////Header hero */
+.hero {
+    min-height: 100vh;
+    background-image: url(https://www.vanupied.com/wp-content/uploads/barcelone-hotel-luxe-arts-barcelona-2.jpeg);
+    background-size: cover;
+    background-position-y: 80%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;       /* largeur du bloc transparent à gauche */
+    height: 100%;     
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.hero__contenu {
+    position: relative;
+    z-index: 2;
+    width: 40%;
+    padding: 60px 30px 40px 30px;
+    color: white;
+    backdrop-filter: blur(3px);
+}
+
+.h1__entete {
+    color: #111;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 70px;
+    margin: 0;
+    text-shadow: 2px 1px rgb(154, 158, 99);
+    text-align: left;
+}
+
+.h2__entete {
+    color: #111;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    margin: 0;
+    text-shadow: 2px 1px rgb(154, 158, 99);
+    text-align: left;
+}
+
+.h3__entete {
+    margin-top: 200px;  
+    font-size: 40px;
+    text-shadow: 2px 1px rgb(154, 158, 99);
+    text-align: left;
+}
+
+/*////////////////////////////Infos hero */
+.hero__infos {
+    position: relative;
+    z-index: 2;
+    margin-top: 360px;        
+    color: white;
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+.hero__infos p {
+    margin: 8px 0;
+}
+
+/* ///////////////////Sections/////// */
+section {
+    height: 100vh;
+}
+
+section h1 {
+    color: white;                 
+    border: 2px solid white;     
+    padding: 10px 20px;           
+    display: inline-block;        
+    border-radius: 8px;           
+    font-weight: bold;            
+}
+
+/* liens sous chaque section */
+section > a {
+    background-color: rgba(15, 14, 14, 0.18);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding-left: 10px;
+    margin: 0;
+    font-size: 30px;
+}
+
+/* couleurs des sections */
+.un {
+    background-color: rgb(139, 151, 86);
+}
+
+.deux {
+    background-color: rgb(76, 68, 68);
+}
+
+.trois {
+    background-color: rgb(140, 95, 89);
+}
+
+.quatre {
+    background-color: rgb(207, 183, 111);
+}
+.cinq {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+
+    background-color: rgb(228, 231, 240);  /* Choisis la couleur que tu veux */
+}
+.galerie{
+    background-color: #d880e4;
+}
+/* //////////////////////////Formulaire */
+
+.formulaire {
+    max-width: 450px;       /* Limite la largeur totale */
+    width: 90%;            
+    margin: 0px auto;     
+    padding: 25px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;              /* Espacement entre champs */
+}
+
+
+.formulaire__div {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulaire__input,
+input[type="radio"],
+input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.boutonFormulaire {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    background-color: #0077ff;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.boutonFormulaire:hover {
+    background-color: #005cd4;
+    transform: translateY(-1px);
+}
+
+.formulaire__div p + label {
+    display: inline-block;    /* met les labels/radios côte à côte */
+    margin-right: 20px;       /* espace entre chaque option */
+}
+
+input[type="radio"] {
+    width: auto;              /* pas besoin que les radios prennent toute la ligne */
+    margin-right: 5px;        /* petit espace entre la radio et le texte */
+}
+
+
+/* /////////////////////////////Tableau */
+.hotel-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: white;
+    font-size: 1.2rem;
+}
+
+.hotel-table th,
+.hotel-table td {
+    border: 2px solid black;
+    padding: 12px;
+    text-align: center;
+}
+
+.hotel-table thead {
+    background-color: rgb(55, 82, 87);
+    color: white;
+    font-weight: bold;
+}
+
+.hotel-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.hotel-table caption {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.hotel-table tfoot td {
+    background-color: rgb(255, 204, 0);
+    font-weight: bold;
+    padding: 15px;
+}
+
+/*////////////////////FOOTER/////////////////*/
+
+.pied-page {
+    background-color: #000;      /* fond noir */
+    color: #eee;                 /* texte clair */
+    padding: 50px 20px;
+}
+
+.footer-contenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 30px;
+}
+
+.footer-bloc {
+    flex: 1 1 250px;
+    text-align: left;
+}
+
+.footer-bloc p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+.footer-bloc a {
+    color: #ff9900;
+    text-decoration: none;
+}
+
+.footer-bloc a:hover {
+    text-decoration: underline;
+}
+
+.privacy {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.footer-bottom {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* Réseaux sociaux */
+.reseaux {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.reseaux img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.reseaux img:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+figure > img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.centre {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.article-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 70px;
+}
+
+/* Alternance droite-gauche */
+.article-item.inverse {
+    flex-direction: row-reverse;
+}
+
+/* Texte */
+.article-texte {
+    flex: 1;
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.article-texte h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Articles*/
+
+.article-item figure {
+    flex: 1;
+}
+
+.article-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.article-item figcaption {
+    margin-top: 8px;
+    font-style: italic;
+    color: #444;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .article-item,
+    .article-item.inverse {
+        flex-direction: column;
+    }
+
+}
+
+
+
+/*Section pour les videos*/
+/* =================== Section Vidéos =================== */
+.videos-wrapper {
+    display: flex;
+    flex-wrap: wrap;          /* permet aux vidéos de passer à la ligne si nécessaire */
+    gap: 100px;                /* espace entre les vidéos */
+    justify-content: center;  /* centre horizontalement */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.video-bloc {
+    background-color: rgb(175, 171, 174); /* fond légèrement clair */
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    flex: 1 1 300px;         /* largeur flexible minimum 300px */
+    max-width: 350px;        /* limite la largeur maximale */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-bloc:hover {
+    transform: translateY(-5px); /* léger effet de levée au survol */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+
+}
+
+.video-bloc video {
+    width:80%;             /* prend toute la largeur du bloc */
+    height: auto;            /* garde les proportions */
+    border-radius: 8px;
+}
+
+.video-source {
+    font-size: 0.85rem;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.video-source a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.video-source a:hover {
+    color: #004a99;
+    text-decoration: underline;
+}
+
+/* Responsive : vidéos sur mobile */
+@media (max-width: 600px) {
+    .video-bloc {
+        max-width: 100%;
+    }
+}
+
+
+/*GALERIE D'IMAGES*/
+
+.galerie {
+    padding: 60px 20px;
+}
+
+.galerie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Images */
+.galerie-grid img {
+    width: 160px;      /* largeur fixe = vignettes */
+    height: 170px;     /* tu gardes EXACTEMENT la même hauteur */
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+
+
+/* Effet au survol */
+.galerie-grid img:hover {
+    transform: scale(1.05); /* léger zoom visuel */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+    filter: brightness(1.1);
+}
+/*Texte section 2*/
+
+.deux p {
+    max-width: 900px;          /* largeur agréable à lire */
+    margin: 20px auto;         /* centré horizontalement */
+    font-family: 'Georgia', serif;  /* élégance */
+    font-size: 1.6rem;
+    line-height: 1.8;          /* espace entre les lignes */
+    color: #fdfcf5;            /* blanc cassé pour bien contraster avec le fond */
+    text-align: justify;        /* lecture élégante */
+}
+
+/* premier mot légèrement mis en valeur */
+.deux p:first-child::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f7d358;  /* or clair */
+    float: left;
+    margin-right: 8px;
+    line-height: 1;
+}
+
+
+/* Bouton d'inscription */
+.btn-inscription {
+    display: inline-block; /* pour pouvoir ajouter padding */
+    margin-top: 20px;      /* espace sous le texte */
+    padding: 12px 24px;
+    background-color: #ff9900;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    /* enlever tout positionnement */
+    position: static;
+}
+
+.btn-inscription:hover {
+    background-color: #cc7a00;
+}
+
+/*Zone de recherhce*/
+.search-form {
+    margin-top: 40px;
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.search-input {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    flex: 1;
+    font-size: 16px;
+}
+
+.search-btn {
+    padding: 10px 16px;
+    border: none;
+    background-color: #ff9900;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: #cc7a00;
+}
+
+
+
+
+

@@ -1,0 +1,12 @@
+# Ignorer le dossier des vidéos lourdes
+video/
+
+# Ignorer les fichiers temporaires
+*.tmp
+*.log
+*.swp
+*.DS_Store
+
+# Ignorer les fichiers compilés ou caches
+*.class
+*.pyc
